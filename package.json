@@ -1,0 +1,27 @@
+{
+  "name": "events",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Task for \"PrognozRNM\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ts": "tsc",
+    "build:scss": "node-sass scss/ -o css/ --recursive --output-style='compact'",
+    "build": "npm run build:ts && npm run build:scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RinatValiullov/Events.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RinatValiullov/Events/issues"
+  },
+  "homepage": "https://github.com/RinatValiullov/Events#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
