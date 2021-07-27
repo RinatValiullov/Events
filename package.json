@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ts": "tsc",
-    "build:scss": "node-sass scss/ -o css/ --recursive --output-style='compact'",
+    "build:ts": "tsc --outDir scripts/js/",
+    "build:scss": "node-sass styles/scss/ -o styles/css/ --recursive --output-style='compact'",
     "build": "npm run build:ts && npm run build:scss"
   },
   "repository": {
