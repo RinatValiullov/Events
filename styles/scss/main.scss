@@ -1,0 +1,40 @@
+@import 'helpers';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  height: inherit;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: minmax(150px, 200px) 1fr;
+  grid-gap: 1rem;
+}
+
+.filters-wrapper .events-wrapper {
+  border: 1px solid #aaa;
+}
+
+.filters-wrapper {
+  background-color: #aaa;
+  padding: 1rem;
+}
+
+.events-wrapper {
+  background-color: #eee;
+}
+
+.event {
+  background-color: #999;
+  padding: 1rem;
+  margin: 1rem;
+}

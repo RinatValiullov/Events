@@ -9,9 +9,60 @@
   <link rel="stylesheet" href="styles/css/main.css">
 </head>
 
-<body>
+<body class="page margin0">
 
-  <h1>Events</h1>
+  <header class="header">
+    <h1 class="header-title margin0">Events</h1>
+  </header>
+  <main class="main">
+    <section class="container">
+      <h2 class="visually-hidden margin0">Filters</h2>
+      <aside class="filters-wrapper">
+        <section class="date-filter-wrapper">
+          <h3 class="visually-hidden margin0">Date filter</h3>
+          <label for="date-filter">Choose data</label>
+          <input type="date" name="date" id="date-filter" />
+        </section>
+        <section class="type-filter-wrapper">
+          <h3 class="visually-hidden margin0">Type filter</h3>
+          <div>
+            <label for="bootstrap-filter">bootstrap</label>
+            <input type="checkbox" name="bootstrap" id="bootstrap-filter" />
+          </div>
+          <div>
+            <label for="foundation-filter">foundation</label>
+            <input type="checkbox" name="foundation" id="foundation-filter" />
+          </div>
+          <div>
+            <label for="bulma-filter">bulma</label>
+            <input type="checkbox" name="bulma" id="bulma-filter" />
+          </div>
+          </div>
+        </section>
+      </aside>
+      <section class="events-wrapper">
+        <h3 class="visually-hidden margin0"></h3>
+        <article class="event">
+          Jaguar shark! So tell me - does it really exist? You really think you
+          can fly that thing? Life finds a way. Hey, you know how I'm, like,
+          always trying to save the planet? Here's my chance. Yes, Yes, without
+          the oops! You know what? It is beets. I've crashed into a beet truck.
+        </article>
+        <article class="event">
+          Jaguar shark! So tell me - does it really exist? You really think you
+          can fly that thing? Life finds a way. Hey, you know how I'm, like,
+          always trying to save the planet? Here's my chance. Yes, Yes, without
+          the oops! You know what? It is beets. I've crashed into a beet truck.
+        </article>
+        <article class="event">
+          Jaguar shark! So tell me - does it really exist? You really think you
+          can fly that thing? Life finds a way. Hey, you know how I'm, like,
+          always trying to save the planet? Here's my chance. Yes, Yes, without
+          the oops! You know what? It is beets. I've crashed into a beet truck.
+        </article>
+      </section>
+    </section>
+  </main>
 
   <script src="scripts/js/app.js"></script>
 </body>
