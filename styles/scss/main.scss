@@ -1,9 +1,11 @@
-@import 'helpers';
+@import "helpers";
 
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -51,10 +53,7 @@ html {
   text-align: right;
 }
 
-
-
 /* Aside (filter) */
-
 
 .filters-wrapper {
   border: 1px solid #333;
@@ -80,7 +79,7 @@ label[for="date-filter"] {
 }
 
 .apply-filter {
-  all:unset;
+  all: unset;
 
   background-color: rgb(199, 155, 155);
   border-radius: 5px;
