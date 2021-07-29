@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ts": "tsc --outDir scripts/js/",
-    "build:scss": "node-sass styles/scss/ -o styles/css/ --recursive --output-style='compact'",
+    "build:scss": "node-sass styles/scss --output styles/css --recursive",
+    "watch:scss": "nodemon -e scss -x \"npm run build:scss\"",
     "build": "npm run build:ts && npm run build:scss"
   },
   "repository": {
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/RinatValiullov/Events#readme",
   "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
     "typescript": "^4.3.5"
   }
 }

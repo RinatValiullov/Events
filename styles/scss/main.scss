@@ -29,17 +29,13 @@ html {
   grid-gap: 1rem;
 }
 
-.events-wrapper {
-  // padding: 1rem;
-}
-
 /* Section (event) */
 
 .event {
   border: 1px solid #333;
   display: flex;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .event-description-wrapper {
@@ -67,11 +63,6 @@ html {
   height: 300px;
   justify-content: space-between;
   padding: 1rem;
-}
-
-.date-filter-wrapper,
-.type-filter-wrapper {
-  // margin-bottom: 1rem;
 }
 
 .type-filter {
