@@ -39,15 +39,16 @@ applyButton.addEventListener('click', event => {
     events.forEach((eventBlock, index) => {
       let typeEvent = (eventBlock as HTMLDivElement).querySelector('.event-type');
       let checkboxValue = (checkbox as HTMLInputElement).name;
-      // (eventBlock as HTMLDivElement).classList.remove('hide');
+
       if ((checkbox as HTMLInputElement).checked) {
         if (typeEvent?.textContent?.toLowerCase() === checkboxValue) {
-          (eventBlock as HTMLDivElement).classList.remove('hide');
+          (eventBlock as HTMLDivElement).classList.add('hide');
         }
       }
+
       if (!(checkbox as HTMLInputElement).checked) {
         if (typeEvent?.textContent?.toLowerCase() === checkboxValue) {
-          (eventBlock as HTMLDivElement).classList.add('hide');
+          (eventBlock as HTMLDivElement).classList.remove('hide');
         }
       }
     });

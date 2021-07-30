@@ -30,15 +30,14 @@ applyButton.addEventListener('click', event => {
             var _a, _b;
             let typeEvent = eventBlock.querySelector('.event-type');
             let checkboxValue = checkbox.name;
-            // (eventBlock as HTMLDivElement).classList.remove('hide');
             if (checkbox.checked) {
                 if (((_a = typeEvent === null || typeEvent === void 0 ? void 0 : typeEvent.textContent) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === checkboxValue) {
-                    eventBlock.classList.remove('hide');
+                    eventBlock.classList.add('hide');
                 }
             }
             if (!checkbox.checked) {
                 if (((_b = typeEvent === null || typeEvent === void 0 ? void 0 : typeEvent.textContent) === null || _b === void 0 ? void 0 : _b.toLowerCase()) === checkboxValue) {
-                    eventBlock.classList.add('hide');
+                    eventBlock.classList.remove('hide');
                 }
             }
         });
