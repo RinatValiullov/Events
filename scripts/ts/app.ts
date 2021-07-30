@@ -1,4 +1,4 @@
-// const applyButton = document.querySelector('.apply-filter') as HTMLButtonElement;
+const applyButton = document.querySelector('.apply-filter') as HTMLButtonElement;
 // const inputDateFilter = document.querySelector('#date-filter') as HTMLInputElement;
 
 // applyButton.addEventListener('click', e => {
@@ -34,22 +34,41 @@ const typeFilterWrapper = document.querySelector('.type-filter-wrapper') as HTML
 
 // })
 
-document.addEventListener('click', event => {
+applyButton.addEventListener('click', event => {
   checkboxes.forEach((checkbox, index) => {
     events.forEach((eventBlock, index) => {
       let typeEvent = (eventBlock as HTMLDivElement).querySelector('.event-type');
       let checkboxValue = (checkbox as HTMLInputElement).name;
-      // eventBlock.classList.remove('hide');
+      // (eventBlock as HTMLDivElement).classList.remove('hide');
       if ((checkbox as HTMLInputElement).checked) {
-        if (checkboxValue === typeEvent?.textContent?.toLowerCase()) {
+        if (typeEvent?.textContent?.toLowerCase() === checkboxValue) {
           (eventBlock as HTMLDivElement).classList.remove('hide');
         }
       }
       if (!(checkbox as HTMLInputElement).checked) {
-        if (checkboxValue === typeEvent?.textContent?.toLowerCase()) {
+        if (typeEvent?.textContent?.toLowerCase() === checkboxValue) {
           (eventBlock as HTMLDivElement).classList.add('hide');
         }
       }
     });
   });
-})
+});
+
+
+// applyButton.addEventListener('click', () => {
+//   checkboxes.forEach((checkbox) => {
+//     events.forEach((div) => {
+//       if (!checkbox.checked) {
+//         div.classList.remove('hide');
+//         if (div.dataset.id === checkbox.name) {
+//           div.classList.add('hide')
+//         }
+//       }
+//       if (checkbox.checked) {
+//         if (div.dataset.id === checkbox.name) {
+//           div.classList.remove('hide')
+//         }
+//       }
+//     })
+//   })
+// })

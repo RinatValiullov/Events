@@ -14,135 +14,135 @@
   <header class="header">
     <h1 class="header-title margin0">Events</h1>
   </header>
-  <main class="main">
-    <section class="container">
-      <h2 class="visually-hidden">Filters</h2>
-      <aside class="filters-wrapper">
-        <section class="date-filter-wrapper">
-          <h3 class="visually-hidden">Date filter</h3>
-          <label for="date-filter">Choose data</label>
-          <input type="date" name="date" id="date-filter" />
-        </section>
-        <section class="type-filter-wrapper">
-          <h3 class="visually-hidden">Type filter</h3>
-          <div class="type-filter">
-            <label for="react-filter">React</label>
-            <input type="checkbox" name="react" id="react-filter" />
-          </div>
-          <div class="type-filter">
-            <label for="vue-filter">Vue</label>
-            <input type="checkbox" name="vue" id="vue-filter" />
-          </div>
-          <div class="type-filter">
-            <label for="angular-filter">Angular</label>
-            <input type="checkbox" name="angular" id="angular-filter" />
-          </div>
-        </section>
-        <button type="button" class="apply-filter">Apply settings</button>
-      </aside>
+  <main class="container">
 
-      <section class="events-wrapper">
-        <h3 class="visually-hidden">Event cards</h3>
-
-        <article class="event react">
-
-          <div class="event-description-wrapper">
-            <h4 class="event-title">Event</h4>
-            <p class="event-description">
-              Jaguar shark! So tell me - does it really exist? You really think you
-              can fly that thing? Life finds a way. Hey, you know how I'm, like,
-              always trying to save the planet? Here's my chance. Yes, Yes, without
-              the oops! You know what? It is beets. I've crashed into a beet truck.
-            </p>
-          </div>
-
-          <div class="event-characteristics-wrapper">
-            <div class="event-characteristics">
-              <div class="event-type">React</div>
-              <time class="event-date" datetime="27.07.2021">27 July</time>
-              <div class="event-status">In progress</div>
-            </div>
-
-            <div class="event-participants">
-              <h4 class="participants-title">Participants</h4>
-              <ul class="participants-list">
-                <li class="participant-item">Erast Sergeyev</li>
-                <li class="participant-item">Mayor Gerasimov</li>
-                <li class="participant-item">Rudolph Glazkov</li>
-                <li class="participant-item">Avdei Kozlov</li>
-              </ul>
-            </div>
-          </div>
-
-        </article>
-
-        <article class="event vue">
-
-          <div class="event-description-wrapper">
-            <h4 class="event-title">Event</h4>
-            <p class="event-description">
-              Jaguar shark! So tell me - does it really exist? You really think you
-              can fly that thing? Life finds a way. Hey, you know how I'm, like,
-              always trying to save the planet? Here's my chance. Yes, Yes, without
-              the oops! You know what? It is beets. I've crashed into a beet truck.
-            </p>
-          </div>
-
-          <div class="event-characteristics-wrapper">
-            <div class="event-characteristics">
-              <div class="event-type">Vue</div>
-              <time class="event-date" datetime="28.07.2021">28 July</time>
-              <div class="event-status">In progress</div>
-            </div>
-
-            <div class="event-participants">
-              <h4 class="participants-title">Participants</h4>
-              <ul class="participants-list">
-                <li class="participant-item">Erast Sergeyev</li>
-                <li class="participant-item">Mayor Gerasimov</li>
-                <li class="participant-item">Rudolph Glazkov</li>
-                <li class="participant-item">Avdei Kozlov</li>
-              </ul>
-            </div>
-          </div>
-
-        </article>
-
-        <article class="event angular">
-
-          <div class="event-description-wrapper">
-            <h4 class="event-title">Event</h4>
-            <p class="event-description">
-              Jaguar shark! So tell me - does it really exist? You really think you
-              can fly that thing? Life finds a way. Hey, you know how I'm, like,
-              always trying to save the planet? Here's my chance. Yes, Yes, without
-              the oops! You know what? It is beets. I've crashed into a beet truck.
-            </p>
-          </div>
-
-          <div class="event-characteristics-wrapper">
-            <div class="event-characteristics">
-              <div class="event-type">Angular</div>
-              <time class="event-date" datetime="29.07.2021">29 July</time>
-              <div class="event-status">In progress</div>
-            </div>
-
-            <div class="event-participants">
-              <h4 class="participants-title">Participants</h4>
-              <ul class="participants-list">
-                <li class="participant-item">Erast Sergeyev</li>
-                <li class="participant-item">Mayor Gerasimov</li>
-                <li class="participant-item">Rudolph Glazkov</li>
-                <li class="participant-item">Avdei Kozlov</li>
-              </ul>
-            </div>
-          </div>
-
-        </article>
-
-
+    <h2 class="visually-hidden">Filters</h2>
+    <aside class="filters-wrapper">
+      <section class="date-filter-wrapper">
+        <h3 class="visually-hidden">Date filter</h3>
+        <label for="date-filter">Choose data</label>
+        <input type="date" name="date" id="date-filter" />
       </section>
+      <section class="type-filter-wrapper">
+        <h3 class="visually-hidden">Type filter</h3>
+        <div class="type-filter">
+          <label for="react-filter">React</label>
+          <input type="checkbox" name="react" id="react-filter" />
+        </div>
+        <div class="type-filter">
+          <label for="vue-filter">Vue</label>
+          <input type="checkbox" name="vue" id="vue-filter" />
+        </div>
+        <div class="type-filter">
+          <label for="angular-filter">Angular</label>
+          <input type="checkbox" name="angular" id="angular-filter" />
+        </div>
+      </section>
+      <button type="button" class="apply-filter">Apply settings</button>
+    </aside>
+
+    <section class="events-wrapper">
+      <h3 class="visually-hidden">Event cards</h3>
+
+      <article class="event react" data-id="react">
+
+        <div class="event-description-wrapper">
+          <h4 class="event-title">Event</h4>
+          <p class="event-description">
+            Jaguar shark! So tell me - does it really exist? You really think you
+            can fly that thing? Life finds a way. Hey, you know how I'm, like,
+            always trying to save the planet? Here's my chance. Yes, Yes, without
+            the oops! You know what? It is beets. I've crashed into a beet truck.
+          </p>
+        </div>
+
+        <div class="event-characteristics-wrapper">
+          <div class="event-characteristics">
+            <div class="event-type">React</div>
+            <time class="event-date" datetime="27.07.2021">27 July</time>
+            <div class="event-status">In progress</div>
+          </div>
+
+          <div class="event-participants">
+            <h4 class="participants-title">Participants</h4>
+            <ul class="participants-list">
+              <li class="participant-item">Erast Sergeyev</li>
+              <li class="participant-item">Mayor Gerasimov</li>
+              <li class="participant-item">Rudolph Glazkov</li>
+              <li class="participant-item">Avdei Kozlov</li>
+            </ul>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="event vue" data-id="vue">
+
+        <div class="event-description-wrapper">
+          <h4 class="event-title">Event</h4>
+          <p class="event-description">
+            Jaguar shark! So tell me - does it really exist? You really think you
+            can fly that thing? Life finds a way. Hey, you know how I'm, like,
+            always trying to save the planet? Here's my chance. Yes, Yes, without
+            the oops! You know what? It is beets. I've crashed into a beet truck.
+          </p>
+        </div>
+
+        <div class="event-characteristics-wrapper">
+          <div class="event-characteristics">
+            <div class="event-type">Vue</div>
+            <time class="event-date" datetime="28.07.2021">28 July</time>
+            <div class="event-status">In progress</div>
+          </div>
+
+          <div class="event-participants">
+            <h4 class="participants-title">Participants</h4>
+            <ul class="participants-list">
+              <li class="participant-item">Erast Sergeyev</li>
+              <li class="participant-item">Mayor Gerasimov</li>
+              <li class="participant-item">Rudolph Glazkov</li>
+              <li class="participant-item">Avdei Kozlov</li>
+            </ul>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="event angular" data-id="angular">
+
+        <div class="event-description-wrapper">
+          <h4 class="event-title">Event</h4>
+          <p class="event-description">
+            Jaguar shark! So tell me - does it really exist? You really think you
+            can fly that thing? Life finds a way. Hey, you know how I'm, like,
+            always trying to save the planet? Here's my chance. Yes, Yes, without
+            the oops! You know what? It is beets. I've crashed into a beet truck.
+          </p>
+        </div>
+
+        <div class="event-characteristics-wrapper">
+          <div class="event-characteristics">
+            <div class="event-type">Angular</div>
+            <time class="event-date" datetime="29.07.2021">29 July</time>
+            <div class="event-status">In progress</div>
+          </div>
+
+          <div class="event-participants">
+            <h4 class="participants-title">Participants</h4>
+            <ul class="participants-list">
+              <li class="participant-item">Erast Sergeyev</li>
+              <li class="participant-item">Mayor Gerasimov</li>
+              <li class="participant-item">Rudolph Glazkov</li>
+              <li class="participant-item">Avdei Kozlov</li>
+            </ul>
+          </div>
+        </div>
+
+      </article>
+
+
     </section>
+
   </main>
 
   <script src="scripts/js/app.js"></script>
