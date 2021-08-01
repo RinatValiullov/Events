@@ -88,10 +88,53 @@ label[for="date-filter"] {
   font-weight: 500;
   padding: 0.4rem;
   text-align: center;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.2s ease;
   width: 100%;
 }
 
 .apply-filter:hover {
   background-color: rgb(207, 140, 140);
+}
+
+/* Modal */
+.modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  width: 100%;
+
+  &__dialog {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 10px 15px;
+
+    &-close {
+      align-self: center;
+      border: 1px solid #555;
+      border-radius: 5px;
+      color: #555;
+      cursor: pointer;
+      display: flex;
+      font-size: 18px;
+      font-weight: 700;
+      justify-content: center;
+      transition: background-color 0.2s ease;
+      width: 30px;
+
+      &:hover {
+        background-color: rgba(85, 85, 85, 0.5);
+      }
+    }
+
+    &-content {
+      display: flex;
+    }
+  }
 }
