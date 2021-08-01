@@ -43,22 +43,28 @@ applyButton.addEventListener('click', event => {
         });
     });
 });
+/* Modal */
 const modal = document.querySelector('.modal');
 const eventDiv = document.querySelector('.event');
 const closeModal = document.querySelector('.modal__dialog-close');
-eventDiv.addEventListener('click', e => {
-    if (!modal.classList.contains('show')) {
-        modal.classList.add('show');
-    }
-    else {
-        modal.classList.remove('show');
-    }
+events.forEach((eventDiv, index) => {
+    eventDiv.addEventListener('click', e => {
+        if (!modal.classList.contains('show')) {
+            modal.classList.add('show');
+        }
+        else {
+            modal.classList.remove('show');
+        }
+    });
 });
-closeModal.addEventListener('click', e => {
-    if (modal.classList.contains('show')) {
-        modal.classList.remove('show');
-    }
-    else {
-        return false;
+modal.addEventListener('click', (evt) => {
+    const target = evt.target;
+    if (target.nodeName === "BUTTON" || target.classList.contains("modal")) {
+        if (modal.classList.contains('show')) {
+            modal.classList.remove('show');
+        }
+        else {
+            return false;
+        }
     }
 });

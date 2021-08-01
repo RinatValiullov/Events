@@ -15,6 +15,29 @@
   opacity: 1;
   visibility: visible; }
 
+@media screen and (max-width: 425px) {
+  body.page {
+    height: auto; }
+  main.container {
+    display: block; }
+    main.container .filters-wrapper {
+      margin-bottom: 1rem; }
+  article.event {
+    flex-direction: column; }
+    article.event:last-of-type {
+      margin-bottom: 0; }
+    article.event .event-description-wrapper,
+    article.event .event-characteristics-wrapper {
+      flex: initial; }
+    article.event .event-description-wrapper {
+      margin: 0; }
+    article.event .event-characteristics-wrapper .event-characteristics {
+      text-align: left; }
+  .modal__dialog {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 90%; } }
+
 html {
   box-sizing: border-box; }
 
@@ -24,7 +47,7 @@ html {
   box-sizing: inherit; }
 
 .page {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   height: 100vh;
   padding: 0.5rem 0; }
 

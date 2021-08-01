@@ -1,0 +1,44 @@
+@media screen and (max-width: 425px) {
+  body.page {
+    height: auto;
+  }
+
+  main.container {
+    display: block;
+
+    .filters-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+
+  article.event {
+    flex-direction: column;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .event-description-wrapper,
+    .event-characteristics-wrapper {
+      flex: initial;
+    }
+
+    .event-description-wrapper {
+      margin: 0;
+    }
+
+    .event-characteristics-wrapper {
+      .event-characteristics {
+        text-align: left;
+      }
+    }
+  }
+
+  .modal {
+    &__dialog {
+      font-size: 0.8rem;
+      padding: 10px;
+      width: 90%;
+    }
+  }
+}

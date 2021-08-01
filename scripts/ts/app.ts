@@ -55,25 +55,37 @@ applyButton.addEventListener('click', event => {
   });
 });
 
+
+/* Modal */
+
 const modal = document.querySelector('.modal') as HTMLDivElement;
 const eventDiv = document.querySelector('.event') as HTMLDivElement;
 const closeModal = document.querySelector('.modal__dialog-close') as HTMLButtonElement;
 
+events.forEach((eventDiv, index) => {
 
-eventDiv.addEventListener('click', e => {
-  if (!modal.classList.contains('show')) {
-    modal.classList.add('show');
-  } else {
-    modal.classList.remove('show');
-  }
-});
+  eventDiv.addEventListener('click', e => {
+    if (!modal.classList.contains('show')) {
+      modal.classList.add('show');
+    } else {
+      modal.classList.remove('show');
+    }
+  });
 
-closeModal.addEventListener('click', e => {
+})
 
-  if (modal.classList.contains('show')) {
-    modal.classList.remove('show');
-  } else {
-    return false;
+
+modal.addEventListener('click', (evt) => {
+  const target = evt.target as HTMLButtonElement;
+
+  if (target.nodeName === "BUTTON" || target.classList.contains("modal")) {
+
+    if (modal.classList.contains('show')) {
+      modal.classList.remove('show');
+    } else {
+      return false;
+    }
+
   }
 
 });
