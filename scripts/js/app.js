@@ -43,20 +43,22 @@ applyButton.addEventListener('click', event => {
         });
     });
 });
-// applyButton.addEventListener('click', () => {
-//   checkboxes.forEach((checkbox) => {
-//     events.forEach((div) => {
-//       if (!checkbox.checked) {
-//         div.classList.remove('hide');
-//         if (div.dataset.id === checkbox.name) {
-//           div.classList.add('hide')
-//         }
-//       }
-//       if (checkbox.checked) {
-//         if (div.dataset.id === checkbox.name) {
-//           div.classList.remove('hide')
-//         }
-//       }
-//     })
-//   })
-// })
+const modal = document.querySelector('.modal');
+const eventDiv = document.querySelector('.event');
+const closeModal = document.querySelector('.modal__dialog-close');
+eventDiv.addEventListener('click', e => {
+    if (!modal.classList.contains('show')) {
+        modal.classList.add('show');
+    }
+    else {
+        modal.classList.remove('show');
+    }
+});
+closeModal.addEventListener('click', e => {
+    if (modal.classList.contains('show')) {
+        modal.classList.remove('show');
+    }
+    else {
+        return false;
+    }
+});
