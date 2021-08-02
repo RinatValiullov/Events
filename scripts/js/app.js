@@ -1,29 +1,7 @@
 "use strict";
 const applyButton = document.querySelector('.apply-filter');
-// const inputDateFilter = document.querySelector('#date-filter') as HTMLInputElement;
-// applyButton.addEventListener('click', e => {
-//   let t1 = document.querySelectorAll('.event-characteristics time')[0] as HTMLTimeElement;
-//   console.log(parseInt(inputDateFilter.value.substr(8, 2), 10) === parseInt(t1.dateTime.substr(0, 2), 10));
-// });
 const events = document.querySelectorAll('.event');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-const typeFilterWrapper = document.querySelector('.type-filter-wrapper');
-// typeFilterWrapper.addEventListener('click', (event) => {
-//   const etarget = event.target as HTMLInputElement;
-//   if (etarget.tagName !== 'INPUT') {
-//     return false;
-//   }
-//   events.forEach((element) => {
-//     let typeEvent = (element as HTMLDivElement).querySelector('.event-type');
-//     const filterType = `${etarget.name.substr(0, 1).toUpperCase()}${etarget?.name.substr(1)}`;
-//     if (filterType === (typeEvent as HTMLDivElement).innerText) {
-//       (typeEvent as HTMLDivElement).innerHTML = ''
-//     }
-//     // if (etarget.checked) {
-//     //   (typeEvent as HTMLDivElement).innerHTML = ''
-//     // }
-//   })
-// })
 applyButton.addEventListener('click', event => {
     checkboxes.forEach((checkbox, index) => {
         events.forEach((eventBlock, index) => {
@@ -44,27 +22,30 @@ applyButton.addEventListener('click', event => {
     });
 });
 /* Modal */
-const modal = document.querySelector('.modal');
+const modals = document.querySelectorAll('.modal');
 const eventDiv = document.querySelector('.event');
 const closeModal = document.querySelector('.modal__dialog-close');
-events.forEach((eventDiv, index) => {
-    eventDiv.addEventListener('click', e => {
-        if (!modal.classList.contains('show')) {
-            modal.classList.add('show');
-        }
-        else {
-            modal.classList.remove('show');
+modals.forEach(modal => {
+    const modalDiv = modal;
+    events.forEach(eventDiv => {
+        eventDiv.addEventListener('click', event => {
+            if (!modalDiv.classList.contains('show') && (eventDiv.dataset['id'] === modalDiv.dataset['modalid'])) {
+                modalDiv.classList.add('show');
+            }
+            else {
+                modalDiv.classList.remove('show');
+            }
+        });
+    });
+    modalDiv.addEventListener('click', (evt) => {
+        const target = evt.target;
+        if (target.nodeName === "BUTTON" || target.classList.contains("modal")) {
+            if (modalDiv.classList.contains('show')) {
+                modalDiv.classList.remove('show');
+            }
+            else {
+                return false;
+            }
         }
     });
-});
-modal.addEventListener('click', (evt) => {
-    const target = evt.target;
-    if (target.nodeName === "BUTTON" || target.classList.contains("modal")) {
-        if (modal.classList.contains('show')) {
-            modal.classList.remove('show');
-        }
-        else {
-            return false;
-        }
-    }
 });

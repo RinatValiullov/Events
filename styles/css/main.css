@@ -25,24 +25,24 @@
     padding: 0; }
     body.page main.container {
       grid-gap: 0.4rem; }
-  article.event {
-    flex-direction: column; }
-    article.event .event-description-wrapper,
-    article.event .event-characteristics-wrapper {
-      flex: initial; }
-    article.event .event-description-wrapper {
-      margin: 0; }
-      article.event .event-description-wrapper .event-title {
-        margin: 0; }
-    article.event .event-characteristics-wrapper {
-      align-items: center;
-      display: flex;
-      justify-content: space-around; }
-      article.event .event-characteristics-wrapper .participants-title {
-        margin: 0 0 1rem; }
-      article.event .event-characteristics-wrapper .participants-list {
-        margin: 0;
-        padding: 0; } }
+      body.page main.container article.event {
+        flex-direction: column; }
+        body.page main.container article.event .event-description-wrapper,
+        body.page main.container article.event .event-characteristics-wrapper {
+          flex: initial; }
+        body.page main.container article.event .event-description-wrapper {
+          margin: 0; }
+          body.page main.container article.event .event-description-wrapper .event-title {
+            margin: 0; }
+        body.page main.container article.event .event-characteristics-wrapper {
+          align-items: center;
+          display: flex;
+          justify-content: space-around; }
+          body.page main.container article.event .event-characteristics-wrapper .participants-title {
+            margin: 0 0 1rem; }
+          body.page main.container article.event .event-characteristics-wrapper .participants-list {
+            margin: 0;
+            padding: 0; } }
 
 @media screen and (max-width: 500px) {
   body.page {
@@ -165,9 +165,9 @@ label[for="date-filter"] {
     padding: 10px 15px; }
     .modal__dialog-close {
       align-self: center;
+      background-color: #c79b9b;
       border: 1px solid #555;
       border-radius: 5px;
-      color: #555;
       cursor: pointer;
       display: flex;
       font-size: 18px;
@@ -176,6 +176,6 @@ label[for="date-filter"] {
       transition: background-color 0.2s ease;
       width: 30px; }
       .modal__dialog-close:hover {
-        background-color: rgba(85, 85, 85, 0.5); }
+        background-color: #cf8c8c; }
     .modal__dialog-content {
       display: flex; }

@@ -95,7 +95,7 @@ label[for="date-filter"] {
 }
 
 .apply-filter:hover {
-  background-color: rgb(207, 140, 140);
+  background-color: rgba(207, 140, 140, 1);
 }
 
 /* Modal */
@@ -121,9 +121,10 @@ label[for="date-filter"] {
 
     &-close {
       align-self: center;
+      background-color: rgba(199, 155, 155, 1);
       border: 1px solid #555;
       border-radius: 5px;
-      color: #555;
+      // color: #555;
       cursor: pointer;
       display: flex;
       font-size: 18px;
@@ -133,7 +134,7 @@ label[for="date-filter"] {
       width: 30px;
 
       &:hover {
-        background-color: rgba(85, 85, 85, 0.5);
+        background-color: rgba(207, 140, 140, 1);
       }
     }
 

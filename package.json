@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ts": "tsc --outDir scripts/js/",
+    "watch:ts": "nodemon -e ts -x \"npm run build:ts\"",
     "build:scss": "node-sass styles/scss --output styles/css --recursive",
     "watch:scss": "nodemon -e scss -x \"npm run build:scss\"",
     "build": "npm run build:ts && npm run build:scss"

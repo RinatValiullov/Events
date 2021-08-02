@@ -8,42 +8,42 @@
 
 @media screen and (max-width: 768px) {
   body.page {
-    main.container {
-      grid-gap: 0.4rem;
-    }
-
     font-size: 0.9rem;
     padding: 0;
-  }
 
-  article.event {
-    flex-direction: column;
+    main.container {
+      grid-gap: 0.4rem;
 
-    .event-description-wrapper,
-    .event-characteristics-wrapper {
-      flex: initial;
-    }
+      article.event {
+        flex-direction: column;
 
-    .event-description-wrapper {
-      margin: 0;
+        .event-description-wrapper,
+        .event-characteristics-wrapper {
+          flex: initial;
+        }
 
-      .event-title {
-        margin: 0;
-      }
-    }
+        .event-description-wrapper {
+          margin: 0;
 
-    .event-characteristics-wrapper {
-      align-items: center;
-      display: flex;
-      justify-content: space-around;
+          .event-title {
+            margin: 0;
+          }
+        }
 
-      .participants-title {
-        margin: 0 0 1rem;
-      }
+        .event-characteristics-wrapper {
+          align-items: center;
+          display: flex;
+          justify-content: space-around;
 
-      .participants-list {
-        margin: 0;
-        padding: 0;
+          .participants-title {
+            margin: 0 0 1rem;
+          }
+
+          .participants-list {
+            margin: 0;
+            padding: 0;
+          }
+        }
       }
     }
   }
