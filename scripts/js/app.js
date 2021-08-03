@@ -1,9 +1,9 @@
 "use strict";
-const applyButton = document.querySelector('.apply-type-filter');
+const applyTypeButton = document.querySelector('.apply-type-filter');
 const events = document.querySelectorAll('.event');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 /* Plural type filter */
-applyButton.addEventListener('click', event => {
+applyTypeButton.addEventListener('click', event => {
     checkboxes.forEach((checkbox, index) => {
         events.forEach((eventBlock, index) => {
             var _a, _b;
@@ -20,6 +20,28 @@ applyButton.addEventListener('click', event => {
                 }
             }
         });
+    });
+});
+/* Date filter */
+const filters = document.querySelectorAll('.date-filter');
+const applyDateButton = document.querySelector('.apply-date-filter');
+applyDateButton.addEventListener('click', evt => {
+    let f_dates = [...filters].reduce((acc, curr) => [...acc, Number(curr.value.split('-').slice(-1))], []);
+    console.log('f_dates', f_dates);
+    // let e_dates: number[] = [...events].reduce((acc, curr) => [...acc, Number(curr.firstElementChild.dateTime.split('-').slice(-1))], []);
+    let e_dates = [...events].reduce((acc, curr) => [...acc, Number(curr.querySelector('time').dateTime.split('-').slice(-1))], []);
+    console.log('sourse:', e_dates);
+    let res_dates = e_dates.filter(date => {
+        return (date >= f_dates[0] && date <= f_dates[1]);
+    });
+    console.log('result:', res_dates);
+    events.forEach(block => {
+        let blockDiv = block;
+        const timeElem = blockDiv.querySelector('time');
+        if (!!res_dates.length &&
+            !res_dates.includes(+timeElem.dateTime.slice(-2))) {
+            blockDiv.classList.add('hide');
+        }
     });
 });
 /* Date filter */
