@@ -15,22 +15,22 @@ html {
   font-family: "Open Sans", sans-serif;
   height: 100vh;
   padding: 0.5rem 0;
-}
 
-.header {
-  text-align: center;
-}
+  .header {
+    text-align: center;
 
-.header-title {
-  margin-bottom: 1rem;
-}
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
 
-.container {
-  height: inherit;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: minmax(150px, 200px) 1fr;
-  grid-gap: 1rem;
+  .container {
+    height: inherit;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: minmax(150px, 200px) 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 /* Section (event) */
@@ -61,41 +61,51 @@ html {
   border: 1px solid #333;
   display: flex;
   flex-direction: column;
-  height: 300px;
+  max-height: 400px;
   justify-content: space-between;
   padding: 1rem;
+
+  .date-filter-wrapper {
+    margin-bottom: 1.4rem;
+
+    .from-filter-wrapper,
+    .to-filter-wrapper {
+      margin-bottom: 0.8rem;
+    }
+
+    .date-filter {
+      display: block;
+      width: 100%;
+    }
+
+    .apply-date-filter {
+      &:hover {
+        background-color: rgba(207, 140, 140, 1);
+      }
+    }
+  }
 }
 
 .type-filter {
   display: flex;
   justify-content: space-between;
-}
-
-.type-filter:not(:last-child) {
   margin-bottom: 1rem;
+  padding: 0.2rem;
+  transition: background-color 0.5s ease;
+
+  label {
+    flex: 2;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
-label[for="date-filter"] {
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.apply-filter {
-  all: unset;
-
-  background-color: rgb(199, 155, 155);
-  border-radius: 5px;
-  box-sizing: inherit;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 0.4rem;
-  text-align: center;
-  transition: background-color 0.2s ease;
-  width: 100%;
-}
-
-.apply-filter:hover {
-  background-color: rgba(207, 140, 140, 1);
+.apply-type-filter {
+  &:hover {
+    background-color: rgba(207, 140, 140, 1);
+  }
 }
 
 /* Modal */

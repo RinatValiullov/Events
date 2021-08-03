@@ -1,7 +1,8 @@
 "use strict";
-const applyButton = document.querySelector('.apply-filter');
+const applyButton = document.querySelector('.apply-type-filter');
 const events = document.querySelectorAll('.event');
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+/* Plural type filter */
 applyButton.addEventListener('click', event => {
     checkboxes.forEach((checkbox, index) => {
         events.forEach((eventBlock, index) => {
@@ -21,6 +22,7 @@ applyButton.addEventListener('click', event => {
         });
     });
 });
+/* Date filter */
 /* Modal */
 const modals = document.querySelectorAll('.modal');
 const eventDiv = document.querySelector('.event');

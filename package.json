@@ -5,7 +5,6 @@
   "description": "Task for \"PrognozRNM\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:ts": "tsc --outDir scripts/js/",
     "watch:ts": "nodemon -e ts -x \"npm run build:ts\"",
     "build:scss": "node-sass styles/scss --output styles/css --recursive",

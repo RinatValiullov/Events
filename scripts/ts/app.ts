@@ -1,7 +1,9 @@
-const applyButton = document.querySelector('.apply-filter') as HTMLButtonElement;
+const applyButton = document.querySelector('.apply-type-filter') as HTMLButtonElement;
 const events = document.querySelectorAll('.event') as NodeList;
 const checkboxes = document.querySelectorAll('input[type="checkbox"]') as NodeList;
 
+
+/* Plural type filter */
 
 applyButton.addEventListener('click', event => {
   checkboxes.forEach((checkbox, index) => {
@@ -23,6 +25,10 @@ applyButton.addEventListener('click', event => {
     });
   });
 });
+
+/* Date filter */
+
+
 
 
 /* Modal */

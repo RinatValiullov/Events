@@ -12,21 +12,34 @@
   <link rel="stylesheet" href="styles/css/main.css">
 </head>
 
-<body class="page margin0">
+<body class="margin0 page">
 
   <header class="header">
-    <h1 class="header-title margin0">Events</h1>
+    <h1 class="header__title margin0">Events</h1>
   </header>
 
   <main class="container">
 
     <h2 class="visually-hidden">Filters</h2>
     <aside class="filters-wrapper">
+
       <section class="date-filter-wrapper">
         <h3 class="visually-hidden">Date filter</h3>
-        <label for="date-filter">Choose data</label>
-        <input type="date" name="date" id="date-filter" />
+        <div class="from-filter-wrapper">
+          <label for="from-filter">From:</label>
+          <input type="date" name="date" class="date-filter from-filter" id="from-filter" value="2021-07-27"
+            min="2021-07-27" max="2021-07-31" />
+        </div>
+        <div class="to-filter-wrapper">
+          <label for="to-filter">To:</label>
+          <input type="date" name="date" class="date-filter to-filter" id="to-filter" value="2021-07-27"
+            min="2021-07-27" max="2021-07-31" />
+        </div>
+        <div>
+          <button type="button" class="btn apply-date-filter">Choose</button>
+        </div>
       </section>
+
       <section class="type-filter-wrapper">
         <h3 class="visually-hidden">Type filter</h3>
         <div class="type-filter">
@@ -41,8 +54,9 @@
           <label for="angular-filter">Angular</label>
           <input type="checkbox" name="angular" id="angular-filter" />
         </div>
+        <button type="button" class="btn apply-type-filter">Apply settings</button>
       </section>
-      <button type="button" class="apply-filter">Apply settings</button>
+
     </aside>
 
     <section class="events-wrapper">
