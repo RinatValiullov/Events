@@ -1,3 +1,4 @@
+@import "variables";
 @import "helpers";
 @import "adaptive";
 
@@ -11,8 +12,7 @@ html {
 }
 
 .page {
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-OpenSans;
   height: 100vh;
   padding: 0.5rem 0;
 
@@ -20,7 +20,7 @@ html {
     text-align: center;
 
     &__title {
-      margin-bottom: 1rem;
+      margin-bottom: $margin-bottom-standard;
     }
   }
 
@@ -36,9 +36,9 @@ html {
 /* Events */
 
 .event {
-  border: 1px solid #333;
+  border: $border;
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: $margin-bottom-standard;
   padding: 0.5rem;
 }
 
@@ -55,12 +55,12 @@ html {
   }
 }
 
-/* Events */
+/* Events(end) */
 
-/* Aside (filter) */
+/* Aside (start) */
 
 .filters-wrapper {
-  border: 1px solid #333;
+  border: $border;
   display: flex;
   flex-direction: column;
   max-height: 400px;
@@ -91,7 +91,7 @@ html {
 .type-filter {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: $margin-bottom-standard;
   padding: 0.2rem;
   transition: background-color 0.5s ease;
 
@@ -109,6 +109,7 @@ html {
     background-color: rgba(207, 140, 140, 1);
   }
 }
+/* Aside (end) */
 
 /* Modal */
 .modal {
@@ -129,17 +130,16 @@ html {
     background-color: #fff;
     border-radius: 10px;
     max-width: 500px;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
 
     &-close {
       align-self: center;
       background-color: rgba(199, 155, 155, 1);
-      border: 1px solid #555;
+      border: $border-close;
       border-radius: 5px;
-      // color: #555;
       cursor: pointer;
       display: flex;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 700;
       justify-content: center;
       transition: background-color 0.2s ease;

@@ -20,8 +20,10 @@
 
   <main class="container">
 
-    <h2 class="visually-hidden">Filters</h2>
+    <!-- Filters section -->
+
     <aside class="filters-wrapper">
+      <h2 class="visually-hidden">Filters</h2>
 
       <section class="date-filter-wrapper">
         <h3 class="visually-hidden">Date filter</h3>
@@ -36,7 +38,7 @@
             min="2021-07-27" max="2021-07-31" />
         </div>
         <div>
-          <button type="button" class="btn apply-date-filter">Choose</button>
+          <button type="button" class="btn apply-date-filter">Choose event date</button>
         </div>
       </section>
 
@@ -54,11 +56,12 @@
           <label for="angular-filter">Angular</label>
           <input type="checkbox" name="angular" id="angular-filter" />
         </div>
-        <button type="button" class="btn apply-type-filter">Apply settings</button>
+        <button type="button" class="btn apply-type-filter">Choose event type</button>
       </section>
 
     </aside>
 
+    <!-- Events section -->
     <section class="events">
       <h3 class="visually-hidden events__title">Event cards</h3>
 

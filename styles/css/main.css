@@ -91,7 +91,6 @@ html {
   box-sizing: inherit; }
 
 .page {
-  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   height: 100vh;
   padding: 0.5rem 0; }
@@ -122,8 +121,8 @@ html {
   .event__characteristics .event__characteristic {
     text-align: right; }
 
-/* Events */
-/* Aside (filter) */
+/* Events(end) */
+/* Aside (start) */
 .filters-wrapper {
   border: 1px solid #333;
   display: flex;
@@ -156,6 +155,7 @@ html {
 .apply-type-filter:hover {
   background-color: #cf8c8c; }
 
+/* Aside (end) */
 /* Modal */
 .modal {
   align-items: center;
@@ -174,7 +174,7 @@ html {
     background-color: #fff;
     border-radius: 10px;
     max-width: 500px;
-    padding: 10px 15px; }
+    padding: 0.625rem 0.9375rem; }
     .modal__dialog-close {
       align-self: center;
       background-color: #c79b9b;
@@ -182,7 +182,7 @@ html {
       border-radius: 5px;
       cursor: pointer;
       display: flex;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 700;
       justify-content: center;
       transition: background-color 0.2s ease;
