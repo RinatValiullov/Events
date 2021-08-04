@@ -7,7 +7,7 @@ applyTypeButton.addEventListener('click', event => {
     checkboxes.forEach((checkbox, index) => {
         events.forEach((eventBlock, index) => {
             var _a, _b;
-            let typeEvent = eventBlock.querySelector('.event-type');
+            let typeEvent = eventBlock.querySelector('.event__characteristic-type');
             let checkboxValue = checkbox.name;
             if (checkbox.checked) {
                 if (((_a = typeEvent === null || typeEvent === void 0 ? void 0 : typeEvent.textContent) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === checkboxValue) {
@@ -28,7 +28,6 @@ const applyDateButton = document.querySelector('.apply-date-filter');
 applyDateButton.addEventListener('click', evt => {
     let f_dates = [...filters].reduce((acc, curr) => [...acc, Number(curr.value.split('-').slice(-1))], []);
     console.log('f_dates', f_dates);
-    // let e_dates: number[] = [...events].reduce((acc, curr) => [...acc, Number(curr.firstElementChild.dateTime.split('-').slice(-1))], []);
     let e_dates = [...events].reduce((acc, curr) => [...acc, Number(curr.querySelector('time').dateTime.split('-').slice(-1))], []);
     console.log('sourse:', e_dates);
     let res_dates = e_dates.filter(date => {

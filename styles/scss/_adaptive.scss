@@ -1,6 +1,6 @@
 @media screen and (max-width: 992px) {
   body.page {
-    .event-description-wrapper {
+    .event__description {
       flex: 2;
     }
   }
@@ -17,29 +17,29 @@
       article.event {
         flex-direction: column;
 
-        .event-description-wrapper,
-        .event-characteristics-wrapper {
+        .event__description,
+        .event__characteristics {
           flex: initial;
         }
 
-        .event-description-wrapper {
+        .event__description {
           margin: 0;
 
-          .event-title {
+          .event__title {
             margin: 0;
           }
         }
 
-        .event-characteristics-wrapper {
+        .event__characteristics {
           align-items: center;
           display: flex;
           justify-content: space-around;
 
-          .participants-title {
+          .event__participants-title {
             margin: 0 0 1rem;
           }
 
-          .participants-list {
+          .event__participants-list {
             margin: 0;
             padding: 0;
           }
@@ -60,28 +60,27 @@
       .filters-wrapper {
         margin-bottom: 1rem;
       }
-    }
-  }
 
-  article.event {
-    flex-direction: column;
+      article.event {
+        flex-direction: column;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
 
-    // .event-description-wrapper,
-    // .event-characteristics-wrapper {
-    //   flex: initial;
-    // }
+        .event__description {
+          margin: 0;
+        }
 
-    .event-description-wrapper {
-      margin: 0;
-    }
+        .event__characteristics {
+          .event__characteristic {
+            text-align: left;
+          }
 
-    .event-characteristics-wrapper {
-      .event-characteristics {
-        text-align: left;
+          .event__participants-title {
+            margin: 0;
+          }
+        }
       }
     }
   }

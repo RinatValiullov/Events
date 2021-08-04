@@ -8,7 +8,7 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]') as NodeLi
 applyTypeButton.addEventListener('click', event => {
   checkboxes.forEach((checkbox, index) => {
     events.forEach((eventBlock, index) => {
-      let typeEvent = (eventBlock as HTMLDivElement).querySelector('.event-type');
+      let typeEvent = (eventBlock as HTMLDivElement).querySelector('.event__characteristic-type');
       let checkboxValue = (checkbox as HTMLInputElement).name;
 
       if ((checkbox as HTMLInputElement).checked) {
@@ -28,17 +28,16 @@ applyTypeButton.addEventListener('click', event => {
 
 /* Date filter */
 
-const filters = document.querySelectorAll('.date-filter');
+const filters = document.querySelectorAll('.date-filter') as NodeList;
 const applyDateButton = document.querySelector('.apply-date-filter') as HTMLButtonElement;
 
 applyDateButton.addEventListener('click', evt => {
 
-  let f_dates: number[] = [...filters].reduce((acc, curr) => [...acc, Number(curr.value.split('-').slice(-1))], []);
+  let f_dates: number[] = [...filters].reduce((acc: number[], curr: any) => [...acc, Number(curr.value.split('-').slice(-1))], []);
   console.log('f_dates', f_dates);
 
 
-  // let e_dates: number[] = [...events].reduce((acc, curr) => [...acc, Number(curr.firstElementChild.dateTime.split('-').slice(-1))], []);
-  let e_dates: number[] = [...events].reduce((acc, curr) => [...acc, Number(curr.querySelector('time').dateTime.split('-').slice(-1))], []);
+  let e_dates: number[] = [...events].reduce((acc: number[], curr: any) => [...acc, Number(curr.querySelector('time').dateTime.split('-').slice(-1))], []);
   console.log('sourse:', e_dates);
 
   let res_dates = e_dates.filter(date => {
