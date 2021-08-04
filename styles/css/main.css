@@ -105,7 +105,7 @@ html {
     grid-template-columns: minmax(150px, 200px) 1fr;
     grid-gap: 1rem; }
 
-/* Events */
+/* Events (start) */
 .event {
   border: 1px solid #333;
   display: flex;
